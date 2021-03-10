@@ -1,0 +1,1 @@
+# Nextjs-firebase-funtions-js
