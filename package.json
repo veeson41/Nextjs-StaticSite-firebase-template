@@ -1,0 +1,25 @@
+{
+  "name": "firebase-next-template-js",
+  "version": "0.1.0",
+  "private": true,
+  "main":"functions/index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "serve": "npm run build && cross-env NODE_ENV=production firebase emulators:start",
+    "serve-function": "firebase emulators:start --only functions",
+    "deploy": "cross-env NODE_ENV=production firebase deploy"
+  },
+  "dependencies": {
+    "next": "10.0.8",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "firebase-admin": "^9.2.0",
+    "firebase-functions": "^3.11.0",
+    "cross-env": "^7.0.3"
+  }, 
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  }
+}

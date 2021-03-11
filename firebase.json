@@ -1,0 +1,20 @@
+{
+  "hosting": {
+    "public": "out",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+      "source":"/api/log",
+      "function":"log"
+      }
+    ]
+  },
+  "functions": {
+    "source": ".",
+    "predeploy": [
+      "npm install",
+      "npm run build"
+    ],
+    "runtime": "nodejs10" 
+  }
+}
